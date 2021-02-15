@@ -3,7 +3,7 @@ Welcome to my awesome repository for the assignment of Databases Advanced. Here 
 
 ## 1: Webscraper
 <ul>
-  <li>Clone the repo: <a>https://github.com/simon-martin-it/DB-Advanced/</a></li>
+  <li>Clone the <a href="https://github.com/simon-martin-it/DB-Advanced">repo</a></li>
   <li>Navigate to the folder with the py file</li>
   <li>Install the required packages wtih <code>pip3 install -r req.txt</code></li>
   <li>run <code>chmod +x scraper.py</code> very annoying but yeah</li>
