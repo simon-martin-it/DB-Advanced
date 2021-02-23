@@ -1,10 +1,18 @@
 import sys
 import os
+import json
 import pandas as pd
+import pymongo as pm
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from time import sleep
 from requests import get
+
+def connect():
+	print("Connecting to MongoDB Database...")
+	client = pm.MongoClient("mongodb://127.0.0.1:27017")
+	db = client["DB-Advanced"]
+	return db["Transactions"]
 
 def scraper():
 	print("Getting data...")
@@ -20,19 +28,32 @@ def scraper():
 	
 	print("Filling Dataframe...")
 	transactions = []
-	for i in range(0,48):
+	for i in range(0,49):
 		btc = info[i*3+1].text[:-4]
 		dolar = info[i*3+2].text[1:].replace(',','')
 		transactions.append([hases[i].text, info[i*3].text, float(btc), float(dolar)])
 	
 	df = pd.DataFrame(transactions, columns=["hash","time","BTC","USD"])
-	df_f = df.sort_values(by=["USD"], ascending=False)
+	df_f = df.sort_values(by=["USD"], ascending=False).head(1)
 	
 	print("saving result to JSON file...")
-	#print(df_f.head(1))
+	t_info = {
+		"Hash": df_f.iloc[0]["hash"],
+		"Time": df_f.iloc[0]["time"],
+		"BTC": df_f.iloc[0]["BTC"],
+		"USD": df_f.iloc[0]["USD"]
+	}
+	
+	with open(df_f.iloc[0]["hash"] + ".json", "w", encoding="utf-8") as f:
+		json.dump(t_info, f, ensure_ascii=False, indent=4)
+		
+	print("Inserting into MongoDB Table...")
+	return t_info
+	
 
 while(True):
 	os.system("clear")
-	scraper()
+	db = connect()
+	db.insert_one(scraper())
 	for i in tqdm(range(1,61)):
 		sleep(1)
