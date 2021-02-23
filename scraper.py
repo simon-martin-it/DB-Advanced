@@ -27,7 +27,9 @@ def scraper():
 	
 	df = pd.DataFrame(transactions, columns=["hash","time","BTC","USD"])
 	df_f = df.sort_values(by=["USD"], ascending=False)
-	print(df_f.head(1))
+	
+	print("saving result to JSON file...")
+	#print(df_f.head(1))
 
 while(True):
 	os.system("clear")
