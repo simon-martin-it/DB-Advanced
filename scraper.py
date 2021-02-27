@@ -10,7 +10,7 @@ from requests import get
 
 def connect():
 	print("Connecting to MongoDB Database...")
-	client = pm.MongoClient("mongodb://127.0.0.1:27017")
+	client = pm.MongoClient("mongodb://localhost:27017/")
 	db = client["DB-Advanced"]
 	return db["Transactions"]
 

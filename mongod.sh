@@ -3,4 +3,3 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb
 sudo apt-get install -y mongodb-org
 sudo systemctl status mongod
 sudo systemctl enable mongod
-sudo systemctl status mongod

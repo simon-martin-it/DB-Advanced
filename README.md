@@ -16,3 +16,4 @@ For the second part of this exercise, we need to install MongoDB on the machine.
   <li><code>chmod +x mongod.sh</code></li>
   <li><code>./mongod.sh</code></li>
 <ul>
+Then, run<code>scraper.py</code> again. 
