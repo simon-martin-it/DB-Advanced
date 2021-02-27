@@ -15,5 +15,7 @@ For the second part of this exercise, we need to install MongoDB on the machine.
 <ul>
   <li><code>chmod +x mongod.sh</code></li>
   <li><code>./mongod.sh</code></li>
-<ul>
-Then, run<code>scraper.py</code> again. 
+</ul>
+Then, run<code>scraper.py</code> again.
+To view the added row in the MongoDB database, use <code>db.Transactions.find()</code> in the mongo cli.
+ 
