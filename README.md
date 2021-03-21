@@ -33,4 +33,15 @@ Lastly run <code>python3 scraper.py</code> once more to start the scraper.
 ## Docker
 For the last part of the exercise, we need to install Docker. Please follow the necessary steps on the Docker website to properly install Docker on your system.
 <br>
-I need to pour the first version of the scraper into a docker image. 
+I need to pour the first version of the scraper into a docker image.
+<br><br>
+You can find the docker image using the following link: <a href="https://hub.docker.com/r/r0620457/btc-scraper">Docker</a>
+
+## Container Orchestration
+Fancy word! This final part requires the aqcuisition of mongodb and redis images. Do this with the following commands:
+<ul>
+  <li><code>sudo docker pull mongo</code></li>
+  <li><code>sudo docker pull redis</code></li>
+</ul>
+
+ 
