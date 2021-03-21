@@ -29,3 +29,8 @@ I have reworked the programs, and now you need to the following to start:
 This bash file will initialise and install mongodb and redis all at once.
 Typing is tiresome!! 
 Lastly run <code>python3 scraper.py</code> once more to start the scraper.
+
+## Docker
+For the last part of the exercise, we need to install Docker. Please follow the necessary steps on the Docker website to properly install Docker on your system.
+<br>
+I need to pour the first version of the scraper into a docker image. 
