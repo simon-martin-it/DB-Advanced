@@ -1,9 +1,9 @@
 import sys
 import os
 import json
-import redis
 import zlib
 import pickle
+import redis
 import pandas as pd
 import pymongo as pm
 from bs4 import BeautifulSoup
