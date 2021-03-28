@@ -43,5 +43,10 @@ Fancy word! This final part requires the aqcuisition of mongodb and redis images
   <li><code>sudo docker pull mongo</code></li>
   <li><code>sudo docker pull redis</code></li>
 </ul>
+I really tried to make things work with all parts of the exercise.
+I'm getting a lot of errors and I don't know how to make it work :(
 
+##Conclusion
+I really enjoyed the exercise though. Docker seems useful and I'm glad I got to learn about it a bit.
+MongoDB isn't my favorite thing in the world but it went alright.
  
